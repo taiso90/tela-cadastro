@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="conteudo">
+     <img src="img/photo.jfif">
+
+    <div id="FormularioCadastro">
+
+      <form action="#" method="GET">
+
+        <h1>Faça sua conta</h1>
+
+        <input type="text" id="text" placeholder="Seu nome ">
+
+        <input type="text" id="phone" placeholder="(00) 0000-0000">
+
+        <input type="email" id="email" placeholder="Seu email ">
+
+        <input type="password" id="password" placeholder="crie uma senha ">
+
+        <input type="password" id="passwordConfirm" placeholder="Repita sua senha ">
+
+        <div class="buttonComfirm">
+          <button type="submit" onclick=confirma()>Confirmar</button>
+        </div>
+
+        <div class="LoginSocial">
+          <button type="submit" style="background-color:white;" onclick=linkGoogle()><img
+              src="img/procurar.png"></button>
+          <button type="submit" style="background-color:white;" onclick=linkFacebook()><img
+              src="img/facebook.png"></button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript">
+    var password = document.getElementById("password");
+    passwordConfirm = document.getElementById("passwordConfirm");
+    name = document.getElementById('text').value;
+    phone = document.getElementById('phone');
+    email = document.getElementById('email');
+
+
+
+    function confirma() {
+      if (password.value != passwordConfirm.value) {
+        passwordConfirm.setCustomValidity("Senhas diferentes!");
+      } else {
+        alert("nome= " + name + "telefone= " + phone + "email= " + email);
+      }
+
+
+    }
+
+    function linkGoogle() {
+      alert("entrar con conta google");
+
+    }
+
+    function linkFacebook() {
+      alert("Entrar com conta Facebook");
+    }
+  </script>
+</body>
+
+</html>
